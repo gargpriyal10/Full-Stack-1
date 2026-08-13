@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef4ff 0%, #f8f6ff 100%);
+      color: #1f2937;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 240px;
+      background: linear-gradient(180deg, #1f3c88 0%, #0f172a 100%);
+      color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .sidebar a:hover {
+      background: #4f46e5;
+      transform: translateX(4px);
+      transition: all 0.2s ease;
+    }
+
+    .main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, #ffffff 0%, #f1f5ff 100%);
+      padding: 15px 20px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+      border: 1px solid #e2e8f0;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .cart-section {
+      background: linear-gradient(145deg, #ffffff 0%, #f9fbff 100%);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .cart-header h3 {
+      margin: 0;
+      color: #1d4ed8;
+    }
+
+    .cart-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .product-thumb {
+      width: 52px;
+      height: 52px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      background: #f3f4f6;
+    }
+
+    .cart-item p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
+      font-weight: bold;
+      color: #4f46e5;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <a href="#">Home</a>
+      <a href="#">Analytics</a>
+      <a href="#">Orders</a>
+      <a href="#">Customers</a>
+      <a href="#">Settings</a>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h1>Welcome Back!</h1>
+        <p>Here’s your overview for today.</p>
+      </div>
+
+      <section class="cards">
+        <div class="card">
+          <h3>Revenue</h3>
+          <p>₹24,500</p>
+        </div>
+        <div class="card">
+          <h3>Orders</h3>
+          <p>320</p>
+        </div>
+        <div class="card">
+          <h3>Customers</h3>
+          <p>1,240</p>
+        </div>
+      </section>
+
+      <section class="cart-section">
+        <div class="cart-header">
+          <h3>Product Cart</h3>
+          <span>3 items</span>
+        </div>
+        <div class="cart-list">
+          <div class="cart-item">
+            <div class="product-meta">
+              <img class="product-thumb" src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=200&q=80" alt="Wireless Mouse" />
+              <div>
+                <strong>Wireless Mouse</strong>
+                <p>White • Qty 1</p>
+              </div>
+            </div>
+            <span>₹1000</span>
+          </div>
+          <div class="cart-item">
+            <div class="product-meta">
+              <img class="product-thumb" src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?auto=format&fit=crop&w=200&q=80" alt="Mechanical Keyboard" />
+              <div>
+                <strong>Mechanical Keyboard</strong>
+                <p>Blue Switch • Qty 1</p>
+              </div>
+            </div>
+            <span>₹3500</span>
+          </div>
+          <div class="cart-item">
+            <div class="product-meta">
+              <img class="product-thumb" src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=200&q=80" alt="USB-C Hub" />
+              <div>
+                <strong>USB-C Hub</strong>
+                <p>7-in-1 • Qty 1</p>
+              </div>
+            </div>
+            <span>₹1500</span>
+          </div>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong>₹6000</strong>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
