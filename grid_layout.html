@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f4f7ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 120px);
+            grid-template-areas:
+                "box1 box2 box3"
+                "box4 box5 box6"
+                "box7 box8 box9";
+            gap: 18px;
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        
+
+        .box {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            font-weight: bold;
+        }
+
+        .box-one {
+            grid-area: box1;
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+        }
+
+        .box-two {
+            grid-area: box2;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            border-radius: 22px;
+        }
+
+        .box-three {
+            grid-area: box3;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            border-radius: 22px;
+        }
+
+        .box-four {
+            grid-area: box4;
+            background: linear-gradient(135deg, #10b981, #0ea5e9);
+            border-radius: 22px;
+        }
+
+        .box-five {
+            grid-area: box5;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 22px;
+        }
+
+        .box-six {
+            grid-area: box6;
+            background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+            border-radius: 22px;
+        }
+
+        .box-seven {
+            grid-area: box7;
+            background: linear-gradient(135deg, #f472b6, #a78bfa);
+            border-radius: 22px;
+        }
+
+        .box-eight {
+            grid-area: box8;
+            background: linear-gradient(135deg, #facc15, #f97316);
+            border-radius: 22px;
+        }
+
+        .box-nine {
+            grid-area: box9;
+            background: linear-gradient(135deg, #22c55e, #06b6d4);
+            border-radius: 22px;
+        }
+
+        .bento-section {
+            max-width: 900px;
+            margin: 30px auto 40px;
+            padding: 0 20px 20px;
+        }
+
+        .bento {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-rows: 120px 120px 120px;
+            gap: 18px;
+        }
+
+        .bento-item {
+            background: #ffffff;
+            border-radius: 22px;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        .bento-item.big {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            background: linear-gradient(135deg, #34618e, #e2e8f0);
+        }
+
+        .bento-item.tall {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+            background: linear-gradient(135deg, #fde68a, #fca5a5);
+        }
+
+        .bento-item.small1 {
+            background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+        }
+
+        .bento-item.small2 {
+            background: linear-gradient(135deg, #c7d2fe, #a5b4fc);
+        }
+
+        .bento-item.small3 {
+            background: linear-gradient(135deg, #bbf7d0, #86efac);
+        }
+
+        @media (max-width: 700px) {
+            .bento {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .bento-item.big,
+            .bento-item.tall,
+            .bento-item.small1,
+            .bento-item.small2,
+            .bento-item.small3 {
+                grid-column: auto;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-one">Box 1</div>
+        <div class="box box-two">Box 2</div>
+        <div class="box box-three">Box 3</div>
+        <div class="box box-four">Box 4</div>
+        <div class="box box-five">Box 5</div>
+        <div class="box box-six">Box 6</div>
+        <div class="box box-seven">Box 7</div>
+        <div class="box box-eight">Box 8</div>
+        <div class="box box-nine">Box 9</div>
+    </div>
+
+    <section class="bento-section">
+        <div class="bento">
+            <div class="bento-item big">Bento Big</div>
+            <div class="bento-item tall">Bento Tall</div>
+            <div class="bento-item small1">Card 1</div>
+            <div class="bento-item small2">Card 2</div>
+            <div class="bento-item small3">Card 3</div>
+        </div>
+    </section>
+</body>
+</html>
+
