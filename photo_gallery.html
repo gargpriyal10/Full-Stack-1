@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Photo Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f9ff;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 20px 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #4c4f69;
+            font-size: 1.8rem;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .item {
+            aspect-ratio: 1 / 1;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease-in;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌸 Flower Photo Gallery 🌸</h1>
+    </div>
+
+    <div class="gallery">
+        <div class="item"><img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&h=400&fit=crop" alt="Rose"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU9XvR-fGnEOkh3Dox4IQh6Nn0hBsOuUOY1SVHpL3xSg&s=10" alt="Sunflower"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjXvCZ2l03_BE6_EzHSBNKApRCaQUW9UerVmYc4Vf-A&s=10" alt="Tulip"></div>
+        <div class="item"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=400&fit=crop" alt="Daisy"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHBpLh-S84wHPf_x1A1GIrUUOSdIIj_P6UWD9QBTlWe9aG9zLXLFl89e3k&s=10" alt="Lily"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikV6NO6AobtJ5UxYyKwtZubFGLPt4JEoQ_lSjkkGtQVgLVFFlZfcx-Iz6&s=10" alt="Orchid"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3V29-S5VnBBPRqBQeJatmfHyw5lQA-T9wL_lC6oIl3VZCLh4zBeTBYug&s=10" alt="Hibiscus"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMTvYJr2uAc1wGUmlvu7MvaPOltiFnouQ_8OOX8vnjgg&s=10" alt="Peony"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTnXsiHnkEnWjPwkI428AmFwYMRfoXHNeogG-3hpaCQ&s=10" alt="Lavender"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5ry-3NHORfbDFGrl3FGJvsjM6_auMc06jLCQfWCeyfsydpeHujfRwZ2M&s=10" alt="Iris"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMDjqUwj7FwVKh8QWLyS2kUy8cqCP-bl7Gr_2QTolEaA&s=10" alt="Poppy"></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1GESTSVhBbTOGoMjYjDnRUkTjH0LMYT7UI-_cI7FPJA&s=10" alt="Lotus"></div>
+    </div>
+</body>
+</html>
