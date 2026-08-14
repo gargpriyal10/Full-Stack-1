@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 20px 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-areas:
+                "sidebar main"
+                "sidebar cards"
+                "footer footer";
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #1f2937;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover {
+            background: #47689e;
+        }
+
+        .main-content {
+            grid-area: main;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .cards {
+            grid-area: cards;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #111827;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "sidebar"
+                    "main"
+                    "cards"
+                    "footer";
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard Header</h1>
+    </div>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Home</a>
+            <a href="#">Analytics</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <section class="main-content">
+            <h2>Main Content Area</h2>
+            <p>This is the main section of the dashboard.</p>
+        </section>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Card 1</h3>
+                <p>Some useful information.</p>
+            </div>
+            <div class="card">
+                <h3>Card 2</h3>
+                <p>Another useful detail.</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Dashboard Footer
+        </footer>
+    </div>
+</body>
+</html>
