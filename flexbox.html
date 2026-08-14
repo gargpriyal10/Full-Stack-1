@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            font-family : Arial, sans-serif;
+            font-size : 20px;
+            padding : 0 20px 30px 0;
+            line-height : 1.5;
+        }
+
+        .flex-container {
+            display: flex;
+            width: 100%;
+            border: 2px slateblue solid;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-item {
+            width :75px;
+            height :75px;
+            background-color : #f1f1f1;
+            border : 2px solid darkblue;
+            text-align : center;
+            font-size :2em;
+            color : black;
+            font-weight : bold;
+            line-height : 1.4;
+        }
+
+        .flex-container-vertical {
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            border: 2px slateblue solid;
+            gap: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #flex-item-1 {
+            background-color: lightcoral;
+        }
+
+        #flex-item-2 {
+            background-color: lightblue;
+        }
+
+        #flex-item-3 {
+            background-color: lightgreen;
+        }
+
+        #flex-item-4 {
+            background-color: lightpink;
+        }
+
+        #flex-item-5 {
+            background-color: lightyellow;
+        }
+
+        #flex-item-6 {
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "flex-container">
+        <div class = "flex-item" id = "flex-item-1">1</div>
+        <div class = "flex-item" id = "flex-item-2">2</div>
+        <div class = "flex-item" id = "flex-item-3">3</div>
+        <div class = "flex-item" id = "flex-item-4">4</div>
+        <div class = "flex-item" id = "flex-item-5">5</div>
+        <div class = "flex-item" id = "flex-item-6">6</div>
+        <div class = "flex-item" id = "flex-item-7">7</div>
+        <div class = "flex-item" id = "flex-item-8">8</div>
+        <div class = "flex-item" id = "flex-item-9">9</div>
+        <div class = "flex-item" id = "flex-item-10">10</div>
+    </div>
+
+    <div class = "flex-container-vertical">
+        <div class = "flex-item" id = "flex-item-11">A</div>
+        <div class = "flex-item" id = "flex-item-12">B</div>
+        <div class = "flex-item" id = "flex-item-13">C</div>
+        <div class = "flex-item" id = "flex-item-14">D</div>
+        <div class = "flex-item" id = "flex-item-15">E</div>
+    </div>
+    
+</body>
+</html>
