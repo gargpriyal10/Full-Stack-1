@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        *{
+            margin : 0;
+            padding :0;
+        }
+        #myId{
+            color :blue
+        }
+        .myclass{
+            color:brown;
+        }
+        input[type="email"]{
+            border-radius: 15px;
+            color:red;
+            border-color: black;
+        }
+        h2{
+            color:violet;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <h3>heading</h3>
+            <p>para_1</p>
+            <p>para_2</p>
+        </span>
+    </div>
+    <h2>SELECTORS</h2>
+    <ul>
+        <li class="myclass">Universal<span>123</span></li>
+        <li id="myId">Id</li>
+        <li class="myclass">Class<span>123</span></li>
+        <li>Attribute</li>
+        <li>Element Name</li>
+        <li>Combinators</li>
+        <li>Pseudo Class</li>
+        <li>Pseudo Elements</li>
+    </ul>
+    <input type="email" placeholder="Email"/>
+    <br>
+    <input type="password" placeholder="Password"/>
+    
+</body>
+</html>
