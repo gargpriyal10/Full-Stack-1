@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        input:required{
+            border-color:black;
+            display: block;
+            margin :10px;
+        }
+        input:optional{
+            border-color: black;
+            display: block;
+            margin:10px;
+        }
+        input:enabled{
+            background-color: transparent;
+        }
+        input:disabled{
+            background-color: grey;
+        }
+        input:invalid{
+            background-color: pink;
+        }
+        input:in-range{
+            background-color: aqua;
+        }
+        input:out-of-range{
+            background-color: pink;
+        }
+        input::placeholder{
+            color:black;
+        }
+        input:placeholder-shown{
+            outline:3px solid ;
+        }
+        input:read-only{
+            border-width: 0px;
+            box-shadow: 0 0 0 transparent;
+            background: grey;
+            color:white;
+        }
+        input:focus{
+            box-shadow:0 0 15px black;
+            color:red;
+        }
+        li:not(:hover){
+            color:yellow;
+        }
+
+    </style>
+
+</head>
+<body>
+    <input type="text" placeholder="First Name" required/>
+    <input type="text" placeholder="Middle Name"/>
+    <input type="text" placeholder="Last Name" required/>
+    <input type="text" value="Mathura" disabled/>
+    <input type="email" placeholder="E-mail"/>
+    <input type="number" min="10" max="100"/>
+    <input type="text" placeholder="readonly"/>
+    <input type="text" placeholder="My Name"/>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+    
+</body>
+</html>
