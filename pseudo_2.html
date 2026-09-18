@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo Elements</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        /* ::before */
+        .before::before {
+            content: "★ ";
+            color: blue;
+        }
+
+        /* ::after */
+        .after::after {
+            content: " ❤️";
+            color: red;
+        }
+
+        /* ::first-letter */
+        .letter::first-letter {
+            color: red;
+            font-size: 50px;
+        }
+
+        /* ::first-line */
+        .line::first-line {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* ::selection */
+        .select::selection {
+            background: red;
+            color: white;
+        }
+
+        /* ::placeholder */
+        input::placeholder {
+            color: purple;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="before">This text has something before it.</p>
+
+    <p class="after">This text has something after it.</p>
+
+    <p class="letter">Hello World</p>
+
+    <p class="line">
+        This is the first line of the paragraph and it will look different.
+        The remaining text will have normal styling.
+    </p>
+
+    <p class="select">
+        Select this text with your mouse to see the pseudo-element effect.
+    </p>
+
+    <input type="text" placeholder="Enter your name">
+
+</body>
+</html>
