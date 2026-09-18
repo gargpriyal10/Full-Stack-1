@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @layer base, special;
+        @layer base{
+
+        p{
+            font-size:30px;
+            color:red;
+        }
+    }
+    @layer special{
+
+        p{
+            color:rgb(197, 235, 59);
+        }
+
+        body{
+            background-color:hotpink;
+        }
+        button{
+            font-size:20px;
+            border-radius:50%;
+            height:150px;
+            width:150px;
+            background-color:rgb(220, 222, 213);
+            border:1px solid grey;
+            box-shadow: 3px 3px 5px grey;
+        }
+        button:hover{
+            background-color:lightgreen;
+        }
+        button:active{
+            box-shadow: inset 3px 3px 5px grey;
+        }
+    }
+    </style>
+</head>
+<body>
+    <p>Specificity</p>
+    <button>Click Me</button>
+    
+</body>
+</html>
