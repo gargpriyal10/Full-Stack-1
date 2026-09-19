@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <style>
+        /*div:has(input:checked){
+            background-color: black;
+            color:white;
+        }*/
+        div:has(h2){
+            background-color: rgb(38, 48, 48);
+            color: aliceblue;
+        }
+        .div:is(h2,h3){
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <p>Lorem ipsum</p>
+    </div>
+    <div class="div">
+        <h2>Heading</h2>
+            <p>lorem ipsum</p>
+    </div>
+    <div class="div">        
+        <h3>Main</h3>
+        <p>lorem</p>
+    </div>
+    
+</body>
+</html>
