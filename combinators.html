@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Combinators</title>
+
+    <style>
+        .container p {
+            color: blue;
+        }
+
+        .content>p {
+            font-weight: bold;
+        }
+
+        h2+p {
+            color:red;
+        }
+
+        h3~p {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>My Portfolio</h1>
+
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I am an AIML student.</p>
+            <p>I love coding.</p>
+        </div>
+
+        <h3>My Skills</h3>
+        <p>Python</p>
+        <p>Java</p>
+        <p>HTML & CSS</p>
+
+    </div>
+
+</body>
+
+</html>
