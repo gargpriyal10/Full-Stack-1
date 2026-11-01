@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Quiz Arena</title>
+    <link rel="stylesheet" href="WEEK1.css">
+</head>
+
+<body>
+    <main class="quiz-container">
+        <header>
+            <h1>⚡ JS Quiz Arena</h1>
+            <p>Test your knowledge. Beat the clock!</p>
+        </header>
+
+        <section id="quiz-screen">
+            <div class="stats">
+                <span id="question-count">Q 1/10</span>
+                <span id="score">Score: 0</span>
+                <span id="timer">⏱ 30s</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <h2 id="question">Loading question...</h2>
+            <div id="options" class="options"></div>
+
+            <div id="feedback" class="feedback" aria-live="polite"></div>
+
+            <button id="next-btn" class="primary-btn" disabled>
+                Next Question →
+            </button>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <div class="trophy">🏆</div>
+            <h2>Quiz Completed!</h2>
+            <p id="final-score"></p>
+            <h3 id="rating"></h3>
+            <button id="review-btn" class="primary-btn">
+                Review Wrong Answers
+            </button>
+            <button id="restart-btn" class="secondary-btn">
+                Restart Quiz ↻
+            </button>
+        </section>
+
+        <section id="review-screen" class="hidden">
+            <h2>Wrong Answers Review</h2>
+            <div id="wrong-list"></div>
+            <button id="review-restart-btn" class="primary-btn">
+                Try Again ↻
+            </button>
+        </section>
+    </main>
+
+    <script src="WEEK1.js"></script>
+</body>
+
+</html>
